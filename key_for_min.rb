@@ -2,6 +2,9 @@
 # Given a hash with numeric values, return the key for the smallest value
 
 def key_for_min_value(name_hash)
+  if name_hash.empty?
+    return nil 
+  else
   new = name_hash.to_a
   compare_to_me = new[0]
   counter = 0
@@ -16,4 +19,5 @@ def key_for_min_value(name_hash)
     end
   end
   return compare_to_me[0]
+end
 end
